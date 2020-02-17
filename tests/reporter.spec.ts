@@ -1,13 +1,9 @@
-import {
-    BufferedWriter,
-    CucumberConsoleReporter,
-    FailedStep,
-    Formatter,
-    Result, Stage,
-} from "../src";
+import {CucumberConsoleReporter, FailedStep, Result, Stage} from "../src/reporter";
 
 import * as sinon from 'sinon';
 import * as chai from 'chai';
+import {Formatter} from "../src/formatter";
+import {BufferedWriter} from "../src/writer";
 chai.use(require('sinon-chai'));
 const should = require('chai').should();
 

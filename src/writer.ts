@@ -1,4 +1,4 @@
-import {Stage} from "./";
+import {Stage} from "./reporter";
 
 export interface Writer {
     log(text: any);

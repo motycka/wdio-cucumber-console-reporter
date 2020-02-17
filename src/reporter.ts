@@ -1,15 +1,30 @@
 import WDIOReporter from '@wdio/reporter';
-import {
-    DefaultFormatter,
-    Formatter,
-    FormatterOptions,
-    BufferedWriter,
-    Writer,
-    FailedStep,
-    Stage,
-    StepError,
-    Result
-} from "./";
+import {DefaultFormatter, Formatter, FormatterOptions} from "./formatter";
+import {BufferedWriter, Writer} from "./writer";
+
+export enum Result {
+    PASSED, FAILED, SKIPPED
+}
+
+export enum Stage {
+    STEP, SCENARIO, FEATURE
+}
+
+export class FailedStep {
+    constructor(
+        public feature: string,
+        public scenario: string,
+        public step: string,
+        public errors: StepError[],
+    ) {}
+}
+
+export class StepError {
+    constructor(
+        public message: string,
+        public stackTrace: string
+    ) {}
+}
 
 export class CucumberConsoleReporter extends WDIOReporter {
 

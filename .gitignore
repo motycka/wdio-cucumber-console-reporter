@@ -102,3 +102,13 @@ dist
 
 # TernJS port file
 .tern-port
+
+#Mac
+.DS_Store
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

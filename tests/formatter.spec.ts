@@ -1,4 +1,5 @@
-import {DefaultFormatter, FailedStep, Result, StepError} from "../src";
+import {FailedStep, Result, StepError} from "../src/reporter";
+import {DefaultFormatter} from "../src/formatter";
 import * as sinon from 'sinon';
 import * as chai from 'chai';
 const expect = chai.expect;

@@ -1,6 +1,6 @@
 import chalk from "chalk";
 import moment = require('moment');
-import {FailedStep, Result, StepError} from "./";
+import {FailedStep, Result, StepError} from "./reporter";
 
 export interface Formatter {
     feature(text: string): string;
