@@ -11,7 +11,7 @@ import {
     Result
 } from "./";
 
-export class CucumberConsoleReporter<T extends Writer> extends WDIOReporter {
+export class CucumberConsoleReporter extends WDIOReporter {
 
     private currentFeature = undefined;
     private currentScenario = undefined;
